@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IndicatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUa-07-0Jr" customClass="ViewPagerIndicator" customModule="ViewPagerIndicator">
+                                <rect key="frame" x="0.0" y="20" width="600" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HGw-rJ-JdH"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0T-Qx-zlY">
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h0T-Qx-zlY" secondAttribute="bottom" id="6nZ-TP-9XV"/>
+                            <constraint firstItem="h0T-Qx-zlY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DFd-Me-pEy"/>
+                            <constraint firstItem="kUa-07-0Jr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="HZm-1x-JP7"/>
+                            <constraint firstAttribute="trailing" secondItem="kUa-07-0Jr" secondAttribute="trailing" id="Npb-LU-0Qe"/>
+                            <constraint firstAttribute="trailing" secondItem="h0T-Qx-zlY" secondAttribute="trailing" id="U8o-LB-gUr"/>
+                            <constraint firstItem="h0T-Qx-zlY" firstAttribute="top" secondItem="kUa-07-0Jr" secondAttribute="bottom" id="mPQ-in-ced"/>
+                            <constraint firstItem="kUa-07-0Jr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zCe-Nv-pzr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="h0T-Qx-zlY" id="hkR-R4-ixW"/>
+                        <outlet property="viewPagerIndicator" destination="kUa-07-0Jr" id="1rc-wc-Iag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
