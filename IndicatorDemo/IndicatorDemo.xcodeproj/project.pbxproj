@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		326FF3A51AF798FC00EACECF /* ViewPagerIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BB0BE71AF23CBB0009A330 /* ViewPagerIndicator.framework */; };
 		326FF3A61AF798FC00EACECF /* ViewPagerIndicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32BB0BE71AF23CBB0009A330 /* ViewPagerIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		326FF3AC1AF79F5E00EACECF /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FF3AB1AF79F5E00EACECF /* BottomViewController.swift */; };
 		32BB0BB91AF23C7E0009A330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BB0BB81AF23C7E0009A330 /* AppDelegate.swift */; };
 		32BB0BBB1AF23C7E0009A330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BB0BBA1AF23C7E0009A330 /* ViewController.swift */; };
 		32BB0BBE1AF23C7E0009A330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BB0BBC1AF23C7E0009A330 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		326FF3AB1AF79F5E00EACECF /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
 		32BB0BB31AF23C7E0009A330 /* IndicatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndicatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BB0BB71AF23C7E0009A330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32BB0BB81AF23C7E0009A330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				32BB0BB81AF23C7E0009A330 /* AppDelegate.swift */,
 				32BB0BBA1AF23C7E0009A330 /* ViewController.swift */,
+				326FF3AB1AF79F5E00EACECF /* BottomViewController.swift */,
 				32BB0BBC1AF23C7E0009A330 /* Main.storyboard */,
 				32BB0BBF1AF23C7E0009A330 /* Images.xcassets */,
 				32BB0BC11AF23C7E0009A330 /* LaunchScreen.xib */,
@@ -288,6 +291,7 @@
 			files = (
 				32BB0BBB1AF23C7E0009A330 /* ViewController.swift in Sources */,
 				32BB0BB91AF23C7E0009A330 /* AppDelegate.swift in Sources */,
+				326FF3AC1AF79F5E00EACECF /* BottomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,16 +1,16 @@
 //
-//  ViewController.swift
+//  BottomViewController.swift
 //  IndicatorDemo
 //
-//  Created by Sai on 15/4/30.
+//  Created by Sai on 15/5/4.
 //  Copyright (c) 2015年 Sai. All rights reserved.
 //
 
 import UIKit
 import ViewPagerIndicator
 
-class ViewController: UIViewController ,ViewPagerIndicatorDelegate,UIScrollViewDelegate{
-
+class BottomViewController: UIViewController ,ViewPagerIndicatorDelegate,UIScrollViewDelegate{
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewPagerIndicator: ViewPagerIndicator!
     var scrollViewHeight: CGFloat!
@@ -37,19 +37,20 @@ class ViewController: UIViewController ,ViewPagerIndicatorDelegate,UIScrollViewD
             textView.textAlignment = NSTextAlignment.Center
             scrollView.addSubview(textView)
         }
-//        viewPagerIndicator.setTitleColorForState(UIColor.blackColor(), state: UIControlState.Selected)
-//        viewPagerIndicator.setTitleColorForState(UIColor.blackColor(), state: UIControlState.Normal)
-//        viewPagerIndicator.tintColor = UIColor.brownColor()
-//        viewPagerIndicator.showBottomLine = false
-//        viewPagerIndicator.autoAdjustSelectionIndicatorWidth = true
-//        viewPagerIndicator.titleFont = UIFont.systemFontOfSize(20)
+                viewPagerIndicator.setTitleColorForState(UIColor.whiteColor(), state: UIControlState.Selected)
+        //        viewPagerIndicator.setTitleColorForState(UIColor.blackColor(), state: UIControlState.Normal)
+        //        viewPagerIndicator.tintColor = UIColor.brownColor()
+        //        viewPagerIndicator.showBottomLine = false
+        //        viewPagerIndicator.autoAdjustSelectionIndicatorWidth = true
+        //        viewPagerIndicator.titleFont = UIFont.systemFontOfSize(20)
         viewPagerIndicator.indicatorDirection = .Top
+        viewPagerIndicator.indicatorHeight = viewPagerIndicator.bounds.height
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     //点击顶部选中后回调
     func indicatorChange(indicatorIndex: Int){
         scrollView.scrollRectToVisible(CGRectMake(self.view.bounds.width * CGFloat(indicatorIndex), 0, self.view.bounds.width, scrollViewHeight), animated: true)
@@ -63,4 +64,3 @@ class ViewController: UIViewController ,ViewPagerIndicatorDelegate,UIScrollViewD
         viewPagerIndicator.setSelectedIndex(index)//改变顶部选中
     }
 }
-

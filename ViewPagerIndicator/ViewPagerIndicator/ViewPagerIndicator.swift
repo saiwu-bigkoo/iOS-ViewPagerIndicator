@@ -9,6 +9,10 @@
 import UIKit
 //@IBDesignable
 public class ViewPagerIndicator: UIControl {
+    public enum IndicatorDirection{
+        case Top,Bottom
+    }
+    public var indicatorDirection: IndicatorDirection = .Bottom
     @IBInspectable public var indicatorHeight: CGFloat = 2.0
     var indicatorIndex = -1
     @IBInspectable public var animationDuration: CGFloat = 0.2
@@ -103,7 +107,13 @@ public class ViewPagerIndicator: UIControl {
     func bottomLineRect() ->CGRect{
         //控件底部横线
         var frame = CGRectMake(0, 0, self.frame.size.width, 0.5)
-        frame.origin.y = self.frame.size.height
+        if(indicatorDirection == .Top){
+            frame.origin.y = 0
+        }
+        else{
+            frame.origin.y = self.frame.size.height
+        }
+        
         return frame
     }
     //获取指示器的Rect
@@ -113,7 +123,14 @@ public class ViewPagerIndicator: UIControl {
         if indicatorIndex < 0 {return frame}
         let title = titles[indicatorIndex] as? NSString
         if title?.length<=0 || button == nil {return frame}
-        frame.origin.y = button!.frame.size.height - indicatorHeight
+        
+        if(indicatorDirection == .Top){
+            frame.origin.y = 0
+        }
+        else{
+            frame.origin.y = button!.frame.size.height - indicatorHeight
+        }
+        
         //底部指示器如果宽度适应内容
         if(autoAdjustSelectionIndicatorWidth){
             var attributes:[NSObject : AnyObject]!

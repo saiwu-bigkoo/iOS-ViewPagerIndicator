@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="seY-6W-sle">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -45,6 +45,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Bottom View Controller-->
+        <scene sceneID="sDc-0a-6GO">
+            <objects>
+                <viewController id="seY-6W-sle" customClass="BottomViewController" customModule="IndicatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GrI-HF-Fh4"/>
+                        <viewControllerLayoutGuide type="bottom" id="7xN-0x-nKK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pzm-Kh-uJ9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPX-U1-c6K" customClass="ViewPagerIndicator" customModule="ViewPagerIndicator">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="DuC-mn-VCr"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9m2-1O-1db">
+                                <rect key="frame" x="0.0" y="20" width="600" height="520"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FPX-U1-c6K" firstAttribute="leading" secondItem="pzm-Kh-uJ9" secondAttribute="leading" id="FcM-bn-n2c"/>
+                            <constraint firstItem="7xN-0x-nKK" firstAttribute="top" secondItem="FPX-U1-c6K" secondAttribute="bottom" id="LXC-0B-xKz"/>
+                            <constraint firstAttribute="trailing" secondItem="9m2-1O-1db" secondAttribute="trailing" id="Ndb-UO-oCW"/>
+                            <constraint firstItem="9m2-1O-1db" firstAttribute="leading" secondItem="pzm-Kh-uJ9" secondAttribute="leading" id="cd4-4V-Ihm"/>
+                            <constraint firstItem="FPX-U1-c6K" firstAttribute="top" secondItem="9m2-1O-1db" secondAttribute="bottom" id="g4u-FN-Eti"/>
+                            <constraint firstItem="9m2-1O-1db" firstAttribute="top" secondItem="FPX-U1-c6K" secondAttribute="bottom" id="h1W-K4-qhb"/>
+                            <constraint firstAttribute="trailing" secondItem="FPX-U1-c6K" secondAttribute="trailing" id="k3f-qd-RfZ"/>
+                            <constraint firstItem="9m2-1O-1db" firstAttribute="top" secondItem="pzm-Kh-uJ9" secondAttribute="top" constant="20" id="uZ7-5T-3Cx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="h1W-K4-qhb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="9m2-1O-1db" id="3mF-Iv-wuu"/>
+                        <outlet property="viewPagerIndicator" destination="FPX-U1-c6K" id="hKg-Wu-VKl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md3-61-Set" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="322"/>
         </scene>
     </scenes>
 </document>
