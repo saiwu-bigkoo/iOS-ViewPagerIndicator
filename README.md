@@ -5,14 +5,17 @@ Paging indicator widgets,swift版的分页指示器，可以配合UIScrollView�
 ## Demo
 
 ![](https://github.com/saiwu-bigkoo/iOS-ViewPagerIndicator/blob/master/preview/indicator.gif)
+![](https://github.com/saiwu-bigkoo/iOS-ViewPagerIndicator/blob/master/preview/indicator2.gif)
 
 ```swift
 //样式设置
-viewPagerIndicator.setTitleColorForState(UIColor.blackColor(), state: UIControlState.Selected)
-viewPagerIndicator.setTitleColorForState(UIColor.blackColor(), state: UIControlState.Normal)
-viewPagerIndicator.tintColor = UIColor.brownColor()
-viewPagerIndicator.showBottomLine = false
-viewPagerIndicator.autoAdjustSelectionIndicatorWidth = true
+viewPagerIndicator.setTitleColorForState(UIColor.blackColor(), state: UIControlState.Selected)//选中文字的颜色
+viewPagerIndicator.setTitleColorForState(UIColor.blackColor(), state: UIControlState.Normal)//正常文字颜色
+viewPagerIndicator.tintColor = UIColor.brownColor()//指示器和基线的颜色
+viewPagerIndicator.showBottomLine = false//基线是否显示
+viewPagerIndicator.autoAdjustSelectionIndicatorWidth = true//指示器宽度是按照文字内容大小还是按照count数量平分屏幕
+viewPagerIndicator.indicatorDirection = .Top//指示器位置
+viewPagerIndicator.indicatorHeight = viewPagerIndicator.bounds.height//指示器高度
 ```
 ```swift
 //点击viewPagerIndicator可以控制scrollView
