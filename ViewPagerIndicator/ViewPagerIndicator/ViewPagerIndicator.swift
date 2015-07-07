@@ -257,6 +257,7 @@ public class ViewPagerIndicator: UIControl {
     }
     
 }
+@objc
 public protocol ViewPagerIndicatorDelegate{
     //返回当前选中第几个
     func indicatorChange(indicatorIndex: Int)
