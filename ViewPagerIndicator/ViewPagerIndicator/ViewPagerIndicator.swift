@@ -133,7 +133,7 @@ public class ViewPagerIndicator: UIControl {
         
         //底部指示器如果宽度适应内容
         if(autoAdjustSelectionIndicatorWidth){
-            var attributes:[NSObject : AnyObject]!
+            var attributes:[String : AnyObject]!
             let attributedString = button?.attributedTitleForState(UIControlState.Selected)
             attributes = attributedString?.attributesAtIndex(0, effectiveRange: nil)
             frame.size = CGSizeMake(title!.sizeWithAttributes(attributes).width, indicatorHeight)
